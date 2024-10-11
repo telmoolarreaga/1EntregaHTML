@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula 1</title>
+    <style>
+        body {
+            font-family: 'Roboto', cursive, sans-serif;
+            background-color: #F0F8FF;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #FF6347;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px;
+            color: black;
+            text-align: left;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        /* Estilos para alinear correctamente el label */
+        label.socio-label {
+            font-size: 1em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fórmula 1</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a> 
+        <a href="Historia.html">Historia</a>
+        <a href="Actualidad.html">Actualidad</a>
+        <a href="Campeones.html">Campeones</a>
+        <a href="Contacto.html">Contacto</a>
+    </nav>
+
+    <h1>Registro</h1>
+    <p>Rellene el formulario para recibir las últimas novedades de la fórmula 1</p>
+    
+    <form action="server.php" method="get">
+        <fieldset>
+            <legend>Escriba sus datos</legend>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre"><br><br>
+
+			<label for="id">DNI: </label>
+            <input type="text" name="id" id="id"><br><br>
+
+			<label for="id-fecha-nacimiento">Fecha de Nacimiento:</label><br>
+            <input type="date" name="fecha_nacimiento" id="id-fecha-nacimiento" required><br><br>
+            
+            <label class="socio-label">¿Qué tipo de aficionado eres?</label><br>
+            <input type="radio" id="principiante" name="tipo_aficionado" value="1" checked>
+            <label for="principiante">Principiante</label><br>
+
+            <input type="radio" id="regular" name="tipo_aficionado" value="2">
+            <label for="regular">Regular</label><br>
+
+			<input type="radio" id="experto" name="tipo_aficionado" value="3">
+            <label for="experto">Experto</label>
+            
+            <br><br>
+            <label for="id-email">Email: </label>
+            <input type="email" name="email" id="id-email">
+            <br><br>
+            <label for="id-password">Contraseña: </label>
+            <input type="password" name="password" id="id-password"><br><br>
+			
+			<input type="checkbox" name="condiciones" id="id-condiciones" value="1">
+            <label for="id-condiciones">Acepto las condiciones</label>
+        </fieldset>
+		<br>
+		<input type="submit" name="registrarme" value="Registrame">
+		
+		<fieldset>
+            <legend>Danos tu opinión:</legend>
+            <label for="id-edad">Contenido de la web </label>
+            <select id="id-edad" name="edad">
+			    <option>Pobre</option>
+                <option selected>Insuficiente</option>
+                <option>Decente</option>
+                <option>Excelente</option>
+            </select><br><br>
+
+            <label for="apariencia">Del 1 al 10, puntue la apariencia de la web: </label>
+            <input type="text" name="apariencia" id="apariencia"><br><br>
+            <textarea name="comentarios" rows="6" cols="30" placeholder="Comentarios"></textarea>
+        </fieldset>
+        
+        <br>
+        
+        
+        <input type="submit" name="enviar" value="ENVIAR">
+    </form>
+
+    <footer>
+        <p>2024 Telmo Olarreaga Frias. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
